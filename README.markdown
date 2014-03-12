@@ -51,7 +51,20 @@ Store the current user somewhere
 -------------------------------
 
 ```coffee
-user - Fitty.currentUser()
+user = Fitty.currentUser()
+```
+
+
+Restore an old session
+----------------------
+```coffee
+
+# Store your stuff
+persist_this_somewhere = Fitty.currentUser().data
+
+# Then, at a later time
+
+Fitty.restoreSession(persist_this_somewhere)
 ```
 
 
