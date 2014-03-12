@@ -3,8 +3,7 @@ Fitty.Api     = require './api'
 Fitty.User    = require './user'
 Fitty.Workout = require './workout'
 
-Fitty._api = 'https://api.fitty.co'
-Fitty._app_token = '76560431e7da48bda286a1c7677c3ca9'
+Fitty.api = 'https://api.fitty.co'
 
 Fitty.signIn = (login, password) ->
   user = {login: login, password: password}

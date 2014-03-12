@@ -1,6 +1,13 @@
 Fitty.js - Everything returns a promise!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Initialize
+==========
+
+```coffee
+Fitty.app_token = "3842289839a948d9e99f939382"
+```
+
 Enable debug output with curl commands
 ======================================
 

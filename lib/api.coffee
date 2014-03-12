@@ -55,7 +55,7 @@ FittyApi.delete = (user, url) ->
 
 FittyApi.urlize = (user, url) ->
   delim = if url.indexOf("?") < 0 then "?" else "&"
-  out = Fitty._api + url + delim + "app_token=#{Fitty._app_token}"
+  out = Fitty.api + url + delim + "app_token=#{Fitty.app_token}"
   out+= "&api_key=#{user.api_key()}" if user?
   out
 
