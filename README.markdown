@@ -1,4 +1,4 @@
-Fitty.js - Everything returns a promise!
+Fitty.js = Everything returns a promise!
 ========================================
 
 Initialize
