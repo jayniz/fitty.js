@@ -1,0 +1,1 @@
+[ ] rewrite Fitty.Api.get to take current user instead of use api key boolean

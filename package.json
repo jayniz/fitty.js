@@ -1,0 +1,36 @@
+{
+  "name": "fitty",
+  "version": "0.0.1",
+  "author": "Jannis Hermanns <jannis@gmail.com>",
+  "description": "Fitty api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayniz/fitty-js.git"
+  },
+  "main": "lib/fitty.js",
+  "scripts": {},
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "gulp": "~3.5.2",
+    "gulp-concat": "*",
+    "gulp-browserify": "https://github.com/deepak1556/gulp-browserify/tarball/master",
+    "coffeeify": "*",
+    "q" : "*"
+  },
+  "keywords": [
+    "fitty",
+    "gym hero"
+  ],
+  "bugs": {
+    "url": "https://github.com/jayniz/fitty-js/issues"
+  },
+  "homepage": "https://github.com/jayniz/fitty-js",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-concat": "~2.1.7",
+    "gulp-browserify": "https://github.com/deepak1556/gulp-browserify/tarball/master",
+    "gulp": "~3.5.2"
+  }
+}
