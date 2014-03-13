@@ -1,11 +1,13 @@
-Fitty.js - Everything returns a promise!
+fitty.js
 ========================================
+
+Everything returns a promise!
 
 Initialize
 ----------
 
 ```coffee
-Fitty.app_token - "3842289839a948d9e99f939382"
+Fitty.app_token = "3842289839a948d9e99f939382"
 ```
 
 On how to obtain an app_token, please consult
