@@ -3,7 +3,7 @@ Fitty.Api     = require './api'
 Fitty.User    = require './user'
 Fitty.Workout = require './workout'
 
-Fitty.api = 'https://api.fitty.co'
+Fitty.api = 'https://fitty.global.ssl.fastly.net'
 
 Fitty.signIn = (login, password) ->
   user = {login: login, password: password}

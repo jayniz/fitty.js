@@ -52,7 +52,9 @@ class User
     Fitty.Api.delete(this, "/workouts/#{workout.id}", workout)
 
   refresh: ->
-    Fitty.Api.get(this, "/users/me").then (d) => @data = d
+    p = Fitty.Api.get(this, "/users/me")
+    p.then((d) => @data = d)
+    p
 
 
 

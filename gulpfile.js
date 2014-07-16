@@ -10,6 +10,13 @@ gulp.task('build', function () {
              .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('build_test', function () {
+  return gulp.src('test/test.coffee', { read: false })
+             .pipe(browserify({ global: true, transform: ['coffeeify'], extensions: ['.coffee'] }))
+             .pipe(concat('test.js'))
+             .pipe(gulp.dest('./test'));
+});
+
 gulp.task('watch', function () {
   var bundler = watchify('fitty.coffee');
 
@@ -38,4 +45,5 @@ gulp.task('test', function() {
 
 gulp.task('default', function () {
   gulp.run('build');
+  gulp.run('build_test');
 });
