@@ -1,7 +1,12 @@
 Fitty = {}
-Fitty.Api     = require './api'
-Fitty.User    = require './user'
-Fitty.Workout = require './workout'
+Fitty.Helper       = require './helper'
+Fitty.Exercise     = require './exercise'
+Fitty.Day          = require './day'
+Fitty.Plan         = require './plan'
+Fitty.PlanCategory = require './plan_category'
+Fitty.Api          = require './api'
+Fitty.User         = require './user'
+Fitty.Workout      = require './workout'
 
 Fitty.api = 'https://fitty.global.ssl.fastly.net'
 
@@ -24,4 +29,5 @@ Fitty.resetPassword = (login) ->
 
 
 console.log "Fitty loaded"
+
 module.exports = Fitty

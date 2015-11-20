@@ -53,7 +53,7 @@ Store the current user somewhere
 -------------------------------
 
 ```coffee
-user = Fitty.currentUser()
+user = Fitty.User.current()
 ```
 
 

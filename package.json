@@ -1,6 +1,6 @@
 {
   "name": "fitty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jannis Hermanns <jannis@gmail.com>",
   "description": "Fitty api",
   "repository": {
@@ -10,13 +10,9 @@
   "main": "lib/fitty.js",
   "scripts": {},
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.37"
   },
   "dependencies": {
-    "gulp": "~3.5.2",
-    "gulp-concat": "*",
-    "gulp-browserify": "https://github.com/deepak1556/gulp-browserify/tarball/master",
-    "coffeeify": "*",
     "q" : "*"
   },
   "keywords": [
@@ -29,8 +25,10 @@
   "homepage": "https://github.com/jayniz/fitty-js",
   "license": "ISC",
   "devDependencies": {
-    "gulp-concat": "~2.1.7",
-    "gulp-browserify": "https://github.com/deepak1556/gulp-browserify/tarball/master",
-    "gulp": "~3.5.2"
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-coffee": "*",
+    "gulp-browserify": "*",
+    "coffeeify": "*"
   }
 }

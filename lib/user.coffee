@@ -6,11 +6,11 @@ class User
   confirmed:          -> !!@data.confirmed
   email:              -> @data.email
   id:                 -> @data.id
-  prefs: ()           -> @fetchPrefs()
+  prefs:              -> @fetchPrefs()
   username:           -> @data.username
   username_literal:   -> @data.username_literal
-  workouts: ()        -> @fetchWorkouts()
-
+  workouts:           -> @fetchWorkouts()
+  plan:               -> @data.plan
 
   deletedWorkouts: (value) ->
     Fitty.Api.get(this, "/users/me/deleted_workouts")
@@ -23,7 +23,7 @@ class User
 
   profileVisibility: (value) ->
     if value
-      value.changed_at ?= +new Date()
+      value.changed_at ?= +new Date() / 1000
       Fitty.Api.put(this, "/users/me/profile_visibility", value)
     else
       Fitty.Api.get(this, "/users/#{@username()}/profile_visibility")
