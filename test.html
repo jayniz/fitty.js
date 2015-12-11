@@ -31,10 +31,21 @@
     Fitty.PlanCategory.all().then (cats) ->
       window.categories = cats
       for cat in cats
-        p cat.name('de')
+        p "Category: #{cat.name('de')}"
         for plan in cat.plans()
-          p plan.name('de'), 1
-          p plan.description('de').body, 2
+          p "Plan: #{plan.name('de')} (#{plan.fitnessLevel().name('de')})", 1
+          p "Desc: #{String(plan.description('de').body).substring(0,60)}...", 2
+          for day in plan.days()
+            p "- Day: #{day.name('de')}", 3
+            for exercise in day.exercises()
+              p "* Exercise: #{exercise.name('de')}", 4
+              for set in (exercise.data.sets or [])
+                p "💪 #{set.reps}x#{set.weight or ''}#{exercise.data.unit or ''}", 5
+
+
+
+
+
 
 
   window.brokenLoginTest = ->

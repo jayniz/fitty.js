@@ -1,15 +1,19 @@
-class Day
-  constructor: (@data) ->
+PlanBase = require './plan_base'
+Workout = require './workout'
 
-  description: (lang) ->
-    Fitty.Helper.byLanguage(@data.descriptions, lang)
+class Day extends PlanBase
 
-  name: (lang) ->
-    Fitty.Helper.nameByLanguage(@data.names, lang)
+  name: (langCode) ->
+    if @data.names.length > 0
+      Fitty.Helper.nameByLanguage(@data.names, langCode)
+    else
+      @workout().name(langCode)
+
+  workout: ->
+    new Workout(@data.workout)
 
   exercises: ->
-    new Fitty.Exercise(d) for d in @data.exercises
-
-
+    return [] unless @data?.workout?.exercises
+    new Fitty.Exercise(d) for d in @data.workout.exercises
 
 module.exports = Day

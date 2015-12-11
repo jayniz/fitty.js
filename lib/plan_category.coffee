@@ -1,10 +1,7 @@
+PlanBase = require './plan_base'
 Q = require 'q'
 
-class PlanCategory
-  constructor: (@data) ->
-
-  name: (lang) ->
-    Fitty.Helper.nameByLanguage(@data.names, lang)
+class PlanCategory extends PlanBase
 
   plans: ->
     new Fitty.Plan(d) for d in @data.plans

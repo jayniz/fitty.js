@@ -1,12 +1,16 @@
-class Plan
-  constructor: (@data) ->
+PlanBase = require './plan_base'
 
-  description: (lang) ->
-    Fitty.Helper.byLanguage(@data.descriptions, lang)
+class Plan extends PlanBase
 
-  name: (lang) ->
-    Fitty.Helper.nameByLanguage(@data.names, lang)
+  fitnessLevel: ->
+    new Fitty.FitnessLevel(@data.fitness_level)
 
+  teaser: (lang) ->
+    Fitty.Helper.byLanguage(@data.teasers, lang)
+
+  days: ->
+    days = for d in @data.days
+      new Fitty.Day(d)
 
 
 module.exports = Plan

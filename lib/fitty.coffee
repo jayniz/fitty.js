@@ -1,5 +1,6 @@
 Fitty = {}
 Fitty.Helper       = require './helper'
+Fitty.FitnessLevel = require './fitness_level'
 Fitty.Exercise     = require './exercise'
 Fitty.Day          = require './day'
 Fitty.Plan         = require './plan'

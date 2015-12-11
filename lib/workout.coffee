@@ -1,4 +1,4 @@
-class Workout
+class Workout 
   constructor: (@data)
 
 
