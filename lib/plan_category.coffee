@@ -10,7 +10,7 @@ class PlanCategory extends PlanBase
 PlanCategory.all = ->
   deferred = Q.defer()
   Fitty.Api.get(null, "/plans")
-    .then((plans) -> deferred.resolve(new PlanCategory(p) for p in plans))
+    .then((plans) -> deferred.resolve(new PlanCategory(p) for p in plans.categories))
     .catch((d) -> deferred.reject(d) )
   deferred.promise
 
