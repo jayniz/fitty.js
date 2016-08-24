@@ -2,7 +2,7 @@ class User
   constructor: (@data) ->
   api_key: -> @data.api_keys[0].key
 
-  api_key:            -> @data.api_keys[0].key
+  api_key:            -> @data?.api_keys?[0]?.key
   confirmed:          -> !!@data.confirmed
   email:              -> @data.email
   id:                 -> @data.id
