@@ -21,6 +21,8 @@
 
   Fitty.api = "http://fitty-api.dev"
   Fitty.app_token = '6b2db197ca3a471896b5093ac03d6c1f'
+  Fitty.api = "https://api.fitty.co"
+  Fitty.app_token = '082e353aa0ff4201a4ce3f6711cecc51'
   Fitty.Api.debug = true
 
   window.setField = (field, value) ->
@@ -29,18 +31,18 @@
   window.plansTest = ->
     p = (d, i = 0) -> document.getElementById('plans').innerHTML += Array(2*i+1).join(' ') + d + "<br>"
     Fitty.PlanCategory.all().then (cats) ->
-      window.categories = cats
-      for cat in cats
-        p "Category: #{cat.name('de')}"
-        for plan in cat.plans()
-          p "Plan: #{plan.name('de')} (#{plan.fitnessLevel().name('de')})", 1
-          p "Desc: #{String(plan.description('de').body).substring(0,60)}...", 2
-          for day in plan.days()
-            p "- Day: #{day.name('de')}", 3
-            for exercise in day.exercises()
-              p "* Exercise: #{exercise.name('de')}", 4
-              for set in (exercise.data.sets or [])
-                p "💪 #{set.reps}x#{set.weight or ''}#{exercise.data.unit or ''}", 5
+      #window.categories = cats
+      # for cat in cats
+      #   p "Category: #{cat.name('de')}"
+      #   for plan in cat.plans()
+      #     p "Plan: #{plan.name('de')} (#{plan.fitnessLevel().name('de')})", 1
+      #     p "Desc: #{String(plan.description('de').body).substring(0,60)}...", 2
+      #     for day in plan.days()
+      #       p "- Day: #{day.name('de')}", 3
+      #       for exercise in day.exercises()
+      #         p "* Exercise: #{exercise.name('de')}", 4
+      #         for set in (exercise.data.sets or [])
+      #           p "💪 #{set.reps}x#{set.weight or ''}#{exercise.data.unit or ''}", 5
 
 
 
